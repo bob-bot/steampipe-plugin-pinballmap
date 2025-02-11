@@ -10,7 +10,7 @@ import (
 func Plugin(ctx context.Context) *plugin.Plugin {
 	return &plugin.Plugin{
 		Name: "steampipe-plugin-pinballmap",
-		ConnectionConfigSchema: nil,
+		ConnectionConfigSchema: ConnectionConfig(),
 		TableMap: map[string]*plugin.Table{
 			"pinballmap_location": tablePinballMapLocation(),
 			"pinballmap_machine":  tablePinballMapMachine(),
